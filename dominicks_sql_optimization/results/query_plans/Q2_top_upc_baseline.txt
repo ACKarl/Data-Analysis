@@ -1,0 +1,15 @@
+2 | 0 | 0 | CO-ROUTINE ranked
+5 | 2 | 0 | CO-ROUTINE (subquery-5)
+7 | 5 | 0 | CO-ROUTINE upc_totals
+8 | 7 | 0 | COMPOUND QUERY
+9 | 8 | 0 | LEFT-MOST SUBQUERY
+15 | 9 | 0 | SCAN wbjc_raw
+19 | 9 | 0 | USE TEMP B-TREE FOR GROUP BY
+60 | 8 | 0 | UNION ALL
+66 | 60 | 0 | SCAN wfrj_raw
+70 | 60 | 0 | USE TEMP B-TREE FOR GROUP BY
+113 | 5 | 0 | SCAN upc_totals
+125 | 5 | 0 | USE TEMP B-TREE FOR ORDER BY
+144 | 2 | 0 | SCAN (subquery-5)
+193 | 0 | 0 | SCAN ranked
+204 | 0 | 0 | USE TEMP B-TREE FOR ORDER BY

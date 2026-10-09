@@ -1,0 +1,1 @@
+8 | 0 | 0 | SCAN juice_weekly_summary USING INDEX idx_weekly_category_week

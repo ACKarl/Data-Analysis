@@ -1,0 +1,2 @@
+4 | 0 | 0 | SCAN juice_price_tier_summary USING INDEX idx_price_tier_category_tier
+42 | 0 | 0 | USE TEMP B-TREE FOR RIGHT PART OF ORDER BY

@@ -1,0 +1,8 @@
+2 | 0 | 0 | CO-ROUTINE raw
+3 | 2 | 0 | COMPOUND QUERY
+4 | 3 | 0 | LEFT-MOST SUBQUERY
+6 | 4 | 0 | SCAN wbjc_raw
+16 | 3 | 0 | UNION ALL
+18 | 16 | 0 | SCAN wfrj_raw
+34 | 0 | 0 | SCAN raw
+37 | 0 | 0 | USE TEMP B-TREE FOR GROUP BY

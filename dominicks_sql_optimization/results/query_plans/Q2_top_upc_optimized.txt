@@ -1,0 +1,9 @@
+2 | 0 | 0 | CO-ROUTINE ranked
+5 | 2 | 0 | CO-ROUTINE (subquery-4)
+7 | 5 | 0 | CO-ROUTINE upc_totals
+14 | 7 | 0 | SCAN juice_weekly_summary USING INDEX idx_weekly_category_upc
+48 | 5 | 0 | SCAN upc_totals
+60 | 5 | 0 | USE TEMP B-TREE FOR ORDER BY
+79 | 2 | 0 | SCAN (subquery-4)
+128 | 0 | 0 | SCAN ranked
+139 | 0 | 0 | USE TEMP B-TREE FOR ORDER BY

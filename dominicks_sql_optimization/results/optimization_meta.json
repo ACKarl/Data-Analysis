@@ -1,0 +1,10 @@
+{
+  "build_seconds": 17.168490400072187,
+  "raw_rows": 9379351,
+  "valid_rows_ok_1": 9221274,
+  "weekly_summary_rows": 132252,
+  "price_tier_summary_rows": 8,
+  "valid_to_weekly_row_reduction_pct": 98.565794704723,
+  "valid_rows_per_weekly_summary_row": 69.72502495236367,
+  "database_size_mib": 361.49609375
+}

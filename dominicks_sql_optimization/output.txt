@@ -1,0 +1,49 @@
+PS S:\简历\AI数据分析\dominicks_sql_optimization> python run_all.py --repeats 7
+
+>>> A:\python3.12\python.exe S:\简历\AI数据分析\dominicks_sql_optimization\import_data.py --data-dir data --db dominicks.sqlite
+  wbjc_raw: 500,000 rows imported (2.3s)
+  wbjc_raw: 1,000,000 rows imported (4.6s)
+  wbjc_raw: 1,500,000 rows imported (7.0s)
+  wbjc_raw: 2,000,000 rows imported (9.3s)
+  wbjc_raw: 2,500,000 rows imported (11.7s)
+  wbjc_raw: 3,000,000 rows imported (14.0s)
+  wbjc_raw: 3,500,000 rows imported (16.3s)
+  wbjc_raw: 4,000,000 rows imported (18.7s)
+  wbjc_raw: 4,500,000 rows imported (21.0s)
+  wbjc_raw: 5,000,000 rows imported (23.3s)
+  wbjc_raw: 5,500,000 rows imported (25.7s)
+  wbjc_raw: 6,000,000 rows imported (28.0s)
+Imported 6,222,806 rows into wbjc_raw in 29.35s
+  wfrj_raw: 500,000 rows imported (2.4s)
+  wfrj_raw: 1,000,000 rows imported (4.7s)
+  wfrj_raw: 1,500,000 rows imported (7.0s)
+  wfrj_raw: 2,000,000 rows imported (9.4s)
+  wfrj_raw: 2,500,000 rows imported (11.7s)
+  wfrj_raw: 3,000,000 rows imported (14.0s)
+Imported 3,156,545 rows into wfrj_raw in 14.84s
+Database created: dominicks.sqlite (345.3 MiB)
+Total import time: 44.19s
+
+>>> A:\python3.12\python.exe S:\简历\AI数据分析\dominicks_sql_optimization\build_optimization.py --db dominicks.sqlite --results-dir S:\简历\AI数据分析\dominicks_sql_optimization\results
+Optimization built in 17.168s
+Valid raw rows (OK=1): 9,221,274
+Weekly summary rows:   132,252
+Row reduction:         98.57%
+Metadata saved to: S:\简历\AI数据分析\dominicks_sql_optimization\results\optimization_meta.json
+
+>>> A:\python3.12\python.exe S:\简历\AI数据分析\dominicks_sql_optimization\benchmark.py --db dominicks.sqlite --repeats 7 --results-dir S:\简历\AI数据分析\dominicks_sql_optimization\results
+Q1_weekly_movement: baseline 11.1487s | optimized 0.0626s | reduction 99.44% | speedup 177.99x | correct=True
+Q2_top_upc: baseline 4.2340s | optimized 0.0426s | reduction 98.99% | speedup 99.30x | correct=True
+Q3_price_tier: baseline 8.1219s | optimized 0.0003s | reduction 100.00% | speedup 28309.04x | correct=True
+
+Overall workload:
+  baseline median-sum: 23.5046s
+  optimized median-sum: 0.1056s
+  latency reduction: 99.55%
+  speedup: 222.66x
+  break-even: ~0.73 complete 3-query workloads
+
+Report: S:\简历\AI数据分析\dominicks_sql_optimization\results\BENCHMARK_REPORT.md
+CSV:    S:\简历\AI数据分析\dominicks_sql_optimization\results\benchmark_results.csv
+
+DONE. Open results/BENCHMARK_REPORT.md for the measured improvement.

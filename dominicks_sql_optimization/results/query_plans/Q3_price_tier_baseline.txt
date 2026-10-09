@@ -1,0 +1,9 @@
+2 | 0 | 0 | CO-ROUTINE valid
+3 | 2 | 0 | COMPOUND QUERY
+4 | 3 | 0 | LEFT-MOST SUBQUERY
+6 | 4 | 0 | SCAN wbjc_raw
+65 | 3 | 0 | UNION ALL
+67 | 65 | 0 | SCAN wfrj_raw
+132 | 0 | 0 | SCAN valid
+166 | 0 | 0 | USE TEMP B-TREE FOR GROUP BY
+293 | 0 | 0 | USE TEMP B-TREE FOR ORDER BY
